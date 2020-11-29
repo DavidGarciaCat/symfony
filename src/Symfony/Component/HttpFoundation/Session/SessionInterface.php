@@ -11,6 +11,8 @@
 
 namespace Symfony\Component\HttpFoundation\Session;
 
+use Symfony\Component\HttpFoundation\Session\Attribute\AttributeBagInterface;
+use Symfony\Component\HttpFoundation\Session\Flash\FlashBagInterface;
 use Symfony\Component\HttpFoundation\Session\Storage\MetadataBag;
 
 /**
@@ -175,4 +177,11 @@ interface SessionInterface
      * @return MetadataBag
      */
     public function getMetadataBag();
+
+    /**
+     * Gets the flashbag interface.
+     *
+     * @return FlashBagInterface
+     */
+    public function getFlashBag();
 }
